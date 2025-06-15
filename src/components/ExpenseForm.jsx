@@ -18,9 +18,9 @@ function ExpenseForm({ setExpenses }) {
         // console.log(formData)
         const errorsData = {}
 
-        // if (!formData.title) {
-        //     errorsData.title = 'Title is required'
-        // }
+        if (!formData.title) {
+            errorsData.title = 'Title is required'
+        }
 
         if (!formData.category) {
             errorsData.category = "Category is required"
