@@ -6,7 +6,7 @@ function ExpenseTable({ expenses }) {
     const [filteredData, setQuery] = useFilter(expenses, (data) => data.category)
     // console.log(result)
 
-    const totalAmount = filteredData.reduce((accumulator, current) => accumulator + current.amount, 0)
+    const totalAmount = filteredData.reduce((accumulator, current) => accumulator + parseInt(current.amount), 0)
 
     return (
         <>
