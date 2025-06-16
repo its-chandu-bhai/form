@@ -1,4 +1,13 @@
+import { useState } from "react"
+import { useFilter } from "../hooks/useFilter"
+
 function ExpenseTable({ expenses }) {
+
+    const [filteredData, setQuery] = useFilter(expenses, (data) => data.category)
+    // console.log(result)
+
+    const totalAmount = filteredData.reduce((accumulator, current) => accumulator + current.amount, 0)
+
     return (
         <>
             <table className="expense-table">
@@ -6,9 +15,9 @@ function ExpenseTable({ expenses }) {
                     <tr>
                         <th>Title</th>
                         <th>
-                            <select>
+                            <select onChange={((e) => setQuery(e.target.value.toLowerCase()))}>
                                 <option value="">All</option>
-                                <option value="grocery">Grocery</option>
+                                <option value="groceries">Groceries</option>
                                 <option value="clothes">Clothes</option>
                                 <option value="bills">Bills</option>
                                 <option value="education">Education</option>
@@ -45,9 +54,9 @@ function ExpenseTable({ expenses }) {
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                     {
-                        expenses.map(({id, title, category, amount}) => (
+                        filteredData.map(({ id, title, category, amount }) => (
                             <tr key={id}>
                                 <td>{title}</td>
                                 <td>{category}</td>
@@ -58,7 +67,7 @@ function ExpenseTable({ expenses }) {
                     <tr>
                         <th>Total</th>
                         <th></th>
-                        <th>₹8100</th>
+                        <th>₹{totalAmount}</th>
                     </tr>
                 </tbody>
             </table>

@@ -1,7 +1,7 @@
 export default [
     {
         id: crypto.randomUUID(),
-        title: "Mild",
+        title: "Milk",
         category: 'Groceries',
         amount: 50,
     },
@@ -20,7 +20,7 @@ export default [
     {
         id: crypto.randomUUID(),
         title: "Electricity Bill",
-        category: 'Utilities',
+        category: 'Bills',
         amount: 50,
     },
 ]
