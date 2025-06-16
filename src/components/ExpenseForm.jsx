@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Input from './input'
-import Select from './select'
+import Input from './Input'
+import Select from './Select'
 
 export default function ExpenseForm({ setExpenses }) {
     const [expense, setExpense] = useState({
