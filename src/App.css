@@ -32,6 +32,7 @@ main {
   width: 100%;
   border-collapse: collapse;
   align-self: flex-start;
+  cursor: pointer;
 }
 
 .expense-table select {

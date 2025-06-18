@@ -2,13 +2,15 @@ import React, { useEffect, useRef, useState } from 'react'
 import Input from './Input'
 import Select from './Select'
 
-export default function ExpenseForm({ setExpenses }) {
-    const [expense, setExpense] = useState({
-        title: '',
-        category: '',
-        amount: '',
-        // email: '',
-    })
+export default function ExpenseForm({ setExpenses, expense, setExpense }) {
+
+    // --------- expense or setexpense ka use hmm edit functionality ka lia use kr rha ha inko copy krka app.jsx file me rkh rha ha taki wha se wo lifting ho pay expenseForm.jsx file ka andar contextMenu.jsx file se
+    // const [expense, setExpense] = useState({
+    //     title: '',
+    //     category: '',
+    //     amount: '',
+    //     // email: '',
+    // })
 
     const [errors, setErrors] = useState({})
 
