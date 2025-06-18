@@ -14,7 +14,7 @@ function App() {
         <div className="expense-tracker">
 
           <ExpenseForm setExpenses={setExpenses} />
-          <ExpenseTable expenses={expenses} />
+          <ExpenseTable expenses={expenses}  setExpenses={setExpenses} />
 
         </div>
       </main>

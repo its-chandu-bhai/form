@@ -2,7 +2,7 @@ import React from 'react'
 
 function Select({ id, name, value, onChange, error, label, options, defaultOption }) {
     return (
-        <div className="input-container">
+        <div className="input-container" >
             <label htmlFor={label}>{label}</label>
             <select id={id} name={name} value={value} onChange={onChange}>
                 <option hidden>{defaultOption}</option>
