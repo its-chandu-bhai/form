@@ -3,17 +3,18 @@ import './App.css'
 import ExpenseForm from './components/ExpenseForm'
 import ExpenseTable from './components/ExpenseTable'
 import expenseData from './expenseData'
+import { useLocaleStorage } from './hooks/useLocaleStorage'
 
 function App() {
 
-  const [expense, setExpense] = useState({
+  const [expense, setExpense] = useLocaleStorage('expense', {
     title: '',
     category: '',
     amount: '',
   })
-  const [expenses, setExpenses] = useState(expenseData)
+  const [expenses, setExpenses] = useLocaleStorage('expenses', expenseData)
 
-  const [editingRowId, setEditingRowId] = useState('')
+  const [editingRowId, setEditingRowId] = useLocaleStorage('editingRowId', '')
 
   return (
     <>
