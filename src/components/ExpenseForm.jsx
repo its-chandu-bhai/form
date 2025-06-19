@@ -122,7 +122,7 @@ export default function ExpenseForm({ setExpenses, expense, setExpense, editingR
                 name="category"
                 value={expense.category}
                 onChange={handleChange}
-                options={['Grocery', 'Clothes', 'Bills', 'Education', 'Medicine']}
+                options={['Groceries', 'Clothes', 'Bills', 'Education', 'Medicine']}
                 defaultOption="Select Category"
                 error={errors.category}
             />
